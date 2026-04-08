@@ -1,0 +1,408 @@
+2026-04-07 19:09:11,743 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-07 19:09:11,753 | INFO | __main__ | OPENAI_API_KEY found
+2026-04-07 19:09:28,512 | INFO | __main__ | User input: List recepies
+2026-04-07 19:09:28,528 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-07 19:09:37,833 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 19:09:37,862 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 19:09:37,862 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 19:09:37,871 | INFO | app.agent_tools | Tool call: list_recipes_tool
+2026-04-07 19:09:37,871 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=3
+2026-04-07 19:09:49,017 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 19:09:49,115 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 19:09:49,125 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 19:09:49,125 | INFO | app.agent_tools | Tool call: create_collection_tool | name=Default
+2026-04-07 19:09:49,125 | INFO | app.tools | Creating collection: name=Default
+2026-04-07 19:09:49,125 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 19:09:49,151 | INFO | app.tools | Collection created successfully: id=9, name=Default
+2026-04-07 19:09:49,151 | INFO | app.graph | Calling model | active_collection=Default | active_recipe=None | messages=5
+2026-04-07 19:09:49,801 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 19:09:50,227 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 19:09:50,227 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 19:09:50,227 | INFO | app.agent_tools | Tool call: list_recipes_tool
+2026-04-07 19:09:50,227 | INFO | app.tools | Listing recipes for collection_id=9
+2026-04-07 19:09:50,227 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 19:09:50,234 | INFO | app.tools | Recipes listed: collection_id=9, count=0
+2026-04-07 19:09:50,239 | INFO | app.graph | Calling model | active_collection=Default | active_recipe=None | messages=7
+2026-04-07 19:09:55,661 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 19:09:55,795 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-07 19:09:55,795 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-07 22:00:43,520 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-07 22:00:43,525 | INFO | __main__ | OPENAI_API_KEY found
+2026-04-07 22:01:14,419 | INFO | __main__ | User input: Which recepies do you have in database?
+2026-04-07 22:01:14,457 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-07 22:01:24,062 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:01:24,187 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 22:01:24,189 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 22:01:24,199 | INFO | app.agent_tools | Tool call: list_collections_tool
+2026-04-07 22:01:24,200 | INFO | app.tools | Listing collections
+2026-04-07 22:01:24,200 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 22:01:24,244 | INFO | app.tools | Collections listed: count=2
+2026-04-07 22:01:24,244 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=3
+2026-04-07 22:01:31,202 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:01:31,749 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-07 22:01:31,752 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-07 22:01:49,825 | INFO | __main__ | User input: What do you have in default?
+2026-04-07 22:01:49,832 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=5
+2026-04-07 22:02:09,385 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:02:09,582 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-07 22:02:09,585 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-07 22:02:23,014 | INFO | __main__ | User input: Activate default and show its contents
+2026-04-07 22:02:23,022 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=7
+2026-04-07 22:02:36,115 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:02:36,134 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 22:02:36,134 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 22:02:36,154 | INFO | app.agent_tools | Tool call: create_collection_tool | name=Default
+2026-04-07 22:02:36,154 | INFO | app.tools | Creating collection: name=Default
+2026-04-07 22:02:36,154 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 22:02:36,154 | ERROR | app.tools | Failed to create collection: name=Default
+Traceback (most recent call last):
+  File "C:\Users\vabel\OneDrive\Рабочий стол\after_PhD\agent_cook\app\tools.py", line 14, in create_collection
+    cursor.execute(
+sqlite3.IntegrityError: UNIQUE constraint failed: collections.name
+2026-04-07 22:02:36,174 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=9
+2026-04-07 22:03:01,498 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:03:01,529 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 22:03:01,529 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 22:03:01,539 | INFO | app.agent_tools | Tool call: list_recipes_tool
+2026-04-07 22:03:01,552 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=11
+2026-04-07 22:03:22,192 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:03:22,247 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-07 22:03:22,250 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-07 22:03:39,485 | INFO | __main__ | User input: Show Italian Cuisone contents
+2026-04-07 22:03:39,492 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=13
+2026-04-07 22:03:56,296 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:03:56,338 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-07 22:03:56,340 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-07 22:06:31,429 | INFO | __main__ | User input: Activate Italian Cuisine collection
+2026-04-07 22:06:31,437 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=15
+2026-04-07 22:06:33,064 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:06:33,098 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 22:06:33,098 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 22:06:33,103 | INFO | app.agent_tools | Tool call: list_collections_tool
+2026-04-07 22:06:33,103 | INFO | app.tools | Listing collections
+2026-04-07 22:06:33,103 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 22:06:33,107 | INFO | app.tools | Collections listed: count=2
+2026-04-07 22:06:33,111 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=17
+2026-04-07 22:06:35,167 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:06:35,209 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 22:06:35,210 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 22:06:35,212 | INFO | app.agent_tools | Tool call: create_collection_tool | name=Italian Cuisine
+2026-04-07 22:06:35,212 | INFO | app.tools | Creating collection: name=Italian Cuisine
+2026-04-07 22:06:35,217 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 22:06:35,219 | ERROR | app.tools | Failed to create collection: name=Italian Cuisine
+Traceback (most recent call last):
+  File "C:\Users\vabel\OneDrive\Рабочий стол\after_PhD\agent_cook\app\tools.py", line 14, in create_collection
+    cursor.execute(
+sqlite3.IntegrityError: UNIQUE constraint failed: collections.name
+2026-04-07 22:06:35,223 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=19
+2026-04-07 22:06:53,641 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:06:53,750 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-07 22:06:53,750 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-07 22:08:32,267 | INFO | __main__ | User input: switch to Italian Cuisine
+2026-04-07 22:08:32,274 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=21
+2026-04-07 22:08:43,433 | INFO | openai._base_client | Retrying request to /chat/completions in 0.386054 seconds
+2026-04-07 22:08:43,827 | INFO | openai._base_client | Retrying request to /chat/completions in 0.950332 seconds
+2026-04-07 22:24:59,953 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-07 22:24:59,963 | INFO | __main__ | OPENAI_API_KEY found
+2026-04-07 22:25:52,091 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-07 22:25:52,091 | INFO | __main__ | OPENAI_API_KEY found
+2026-04-07 22:26:19,345 | INFO | __main__ | User input: List all collections
+2026-04-07 22:26:19,354 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-07 22:26:25,201 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:26:25,222 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 22:26:25,226 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 22:26:25,231 | INFO | app.agent_tools | Tool call: list_collections_tool
+2026-04-07 22:26:25,231 | INFO | app.tools | Listing collections
+2026-04-07 22:26:25,231 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 22:26:25,231 | INFO | app.tools | Collections listed: count=2
+2026-04-07 22:26:25,250 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=3
+2026-04-07 22:26:29,606 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:26:29,802 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-07 22:26:29,802 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-07 22:26:57,369 | INFO | __main__ | User input: List all collections
+2026-04-07 22:26:57,372 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=5
+2026-04-07 22:27:03,501 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:27:03,536 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 22:27:03,536 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 22:27:07,749 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-07 22:27:07,749 | INFO | __main__ | OPENAI_API_KEY found
+2026-04-07 22:27:20,102 | INFO | __main__ | User input: Show Italian Cuisine contents
+2026-04-07 22:27:20,121 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-07 22:27:31,764 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:27:31,887 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 22:27:31,887 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 22:27:31,897 | INFO | app.agent_tools | Tool call: select_collection_tool | name=Italian Cuisine
+2026-04-07 22:27:31,897 | INFO | app.tools | Getting collection by name: Italian Cuisine
+2026-04-07 22:27:31,897 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 22:27:31,918 | INFO | app.tools | Collection found by name: id=8, name=Italian Cuisine
+2026-04-07 22:27:31,930 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=3
+2026-04-07 22:27:32,995 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:27:33,029 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-07 22:27:33,032 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-07 22:53:49,518 | INFO | __main__ | User input: Add Carbonara to Italian Cuisine
+2026-04-07 22:53:49,536 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=5
+2026-04-07 22:54:03,981 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:54:04,524 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 22:54:04,527 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 22:54:04,533 | INFO | app.agent_tools | Tool call: create_recipe_tool | name=Carbonara
+2026-04-07 22:54:04,533 | INFO | app.tools | Creating recipe: collection_id=8, name=Carbonara, servings=4, prep_time=25
+2026-04-07 22:54:04,533 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 22:54:04,551 | ERROR | app.tools | Failed to create recipe: collection_id=8, name=Carbonara
+Traceback (most recent call last):
+  File "C:\Users\vabel\OneDrive\Рабочий стол\after_PhD\agent_cook\app\tools.py", line 91, in create_recipe
+    cursor.execute(
+sqlite3.IntegrityError: UNIQUE constraint failed: recipes.collection_id, recipes.name
+2026-04-07 22:54:04,561 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=7
+2026-04-07 22:54:11,760 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:54:11,775 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 22:54:11,777 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 22:54:11,788 | INFO | app.agent_tools | Tool call: list_recipes_tool
+2026-04-07 22:54:11,788 | INFO | app.tools | Listing recipes for collection_id=8
+2026-04-07 22:54:11,791 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 22:54:11,797 | INFO | app.tools | Recipes listed: collection_id=8, count=1
+2026-04-07 22:54:11,805 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=9
+2026-04-07 22:54:17,698 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:54:17,997 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-07 22:54:17,997 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-07 22:54:33,795 | INFO | __main__ | User input: Then show Italian Cuisine contents
+2026-04-07 22:54:33,806 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=11
+2026-04-07 22:54:41,967 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:54:41,997 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 22:54:42,001 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 22:54:42,007 | INFO | app.agent_tools | Tool call: select_collection_tool | name=Italian Cuisine
+2026-04-07 22:54:42,007 | INFO | app.tools | Getting collection by name: Italian Cuisine
+2026-04-07 22:54:42,007 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 22:54:42,016 | INFO | app.tools | Collection found by name: id=8, name=Italian Cuisine
+2026-04-07 22:54:42,016 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=13
+2026-04-07 22:54:44,214 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:54:44,231 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 22:54:44,235 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 22:54:44,245 | INFO | app.agent_tools | Tool call: list_recipes_tool
+2026-04-07 22:54:44,245 | INFO | app.tools | Listing recipes for collection_id=8
+2026-04-07 22:54:44,245 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 22:54:44,249 | INFO | app.tools | Recipes listed: collection_id=8, count=1
+2026-04-07 22:54:44,257 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=15
+2026-04-07 22:54:49,340 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 22:54:49,540 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-07 22:54:49,544 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-07 23:13:11,262 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-07 23:13:11,268 | INFO | __main__ | OPENAI_API_KEY found
+2026-04-07 23:13:41,882 | INFO | __main__ | User input: give me reciepies that you have and collections
+2026-04-07 23:13:41,899 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-07 23:13:56,628 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 23:13:56,672 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 23:13:56,673 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 23:13:56,687 | INFO | app.agent_tools | Tool call: list_collections_tool
+2026-04-07 23:13:56,687 | INFO | app.tools | Listing collections
+2026-04-07 23:13:56,687 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 23:13:56,701 | INFO | app.tools | Collections listed: count=2
+2026-04-07 23:13:56,701 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=3
+2026-04-07 23:14:10,346 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-07 23:14:10,383 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-07 23:14:10,393 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-07 23:14:10,444 | INFO | app.agent_tools | Tool call: show_collection_contents_tool | name=Default
+2026-04-07 23:14:10,444 | INFO | app.tools | Getting collection by name: Default
+2026-04-07 23:14:10,444 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 23:14:10,446 | INFO | app.tools | Collection found by name: id=9, name=Default
+2026-04-07 23:14:10,446 | INFO | app.tools | Listing recipes for collection_id=9
+2026-04-07 23:14:10,446 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 23:14:10,450 | INFO | app.tools | Recipes listed: collection_id=9, count=0
+2026-04-07 23:14:10,450 | INFO | app.agent_tools | Tool call: show_collection_contents_tool | name=Italian Cuisine
+2026-04-07 23:14:10,450 | INFO | app.tools | Getting collection by name: Italian Cuisine
+2026-04-07 23:14:10,450 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 23:14:10,450 | INFO | app.tools | Collection found by name: id=8, name=Italian Cuisine
+2026-04-07 23:14:10,450 | INFO | app.tools | Listing recipes for collection_id=8
+2026-04-07 23:14:10,450 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-07 23:14:10,450 | INFO | app.tools | Recipes listed: collection_id=8, count=1
+2026-04-08 15:12:34,105 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 15:12:34,115 | INFO | __main__ | OPENAI_API_KEY found
+2026-04-08 15:13:08,372 | INFO | __main__ | User input: How many collections are there?
+2026-04-08 15:13:08,406 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-08 15:13:13,308 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:13:13,348 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-08 15:13:13,348 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-08 15:13:13,348 | INFO | app.agent_tools | Tool call: list_collections_tool
+2026-04-08 15:13:13,348 | INFO | app.tools | Listing collections
+2026-04-08 15:13:13,348 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-08 15:13:13,388 | INFO | app.tools | Collections listed: count=2
+2026-04-08 15:13:13,399 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=3
+2026-04-08 15:13:18,350 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:13:18,506 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-08 15:13:18,506 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-08 15:13:27,271 | INFO | __main__ | User input: What are recipies in Italian Cuisine
+2026-04-08 15:13:27,275 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=5
+2026-04-08 15:13:31,960 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:13:31,989 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-08 15:13:31,989 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-08 15:13:31,998 | INFO | app.agent_tools | Tool call: select_collection_tool | name=Italian Cuisine
+2026-04-08 15:13:31,998 | INFO | app.tools | Getting collection by name: Italian Cuisine
+2026-04-08 15:13:31,998 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-08 15:13:32,008 | INFO | app.tools | Collection found by name: id=8, name=Italian Cuisine
+2026-04-08 15:13:32,008 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=7
+2026-04-08 15:13:33,854 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:13:33,864 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-08 15:13:33,864 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-08 15:13:33,874 | INFO | app.agent_tools | Tool call: list_recipes_tool
+2026-04-08 15:13:33,874 | INFO | app.tools | Listing recipes for collection_id=8
+2026-04-08 15:13:33,874 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-08 15:13:33,874 | INFO | app.tools | Recipes listed: collection_id=8, count=1
+2026-04-08 15:13:33,884 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=9
+2026-04-08 15:13:41,337 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:13:41,462 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-08 15:13:41,462 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-08 15:13:55,462 | INFO | __main__ | User input: What are steps to prepare Carbonara?
+2026-04-08 15:13:55,467 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=11
+2026-04-08 15:14:06,110 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:14:06,171 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-08 15:14:06,171 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-08 15:14:06,175 | INFO | app.agent_tools | Tool call: show_recipe_by_number_tool | number=1
+2026-04-08 15:14:06,175 | INFO | app.tools | Getting full recipe for recipe_id=7
+2026-04-08 15:14:06,175 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-08 15:14:06,177 | INFO | app.tools | Full recipe loaded: recipe_id=7, steps=4, ingredients=4
+2026-04-08 15:14:06,181 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=Carbonara | messages=13
+2026-04-08 15:14:13,494 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:14:13,781 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-08 15:14:13,782 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-08 15:14:38,231 | INFO | __main__ | User input: Can you add another collection? It is called China food
+2026-04-08 15:14:38,236 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=Carbonara | messages=15
+2026-04-08 15:14:43,458 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:14:43,547 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-08 15:14:43,547 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-08 15:14:43,557 | INFO | app.agent_tools | Tool call: create_collection_tool | name=China food
+2026-04-08 15:14:43,557 | INFO | app.tools | Creating collection: name=China food
+2026-04-08 15:14:43,557 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-08 15:14:43,588 | INFO | app.tools | Collection created successfully: id=10, name=China food
+2026-04-08 15:14:43,588 | INFO | app.graph | Calling model | active_collection=China food | active_recipe=None | messages=17
+2026-04-08 15:14:44,744 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:14:44,834 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-08 15:14:44,834 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-08 15:15:52,963 | INFO | __main__ | User input: Add there recipy for sweer-sour chicken with rice - copy sevings and prep time from Carbonara
+2026-04-08 15:15:52,966 | INFO | app.graph | Calling model | active_collection=China food | active_recipe=None | messages=19
+2026-04-08 15:15:58,674 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:15:58,824 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-08 15:15:58,824 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-08 15:15:58,834 | INFO | app.agent_tools | Tool call: create_recipe_tool | name=sweer-sour chicken with rice
+2026-04-08 15:15:58,834 | INFO | app.tools | Creating recipe: collection_id=10, name=sweer-sour chicken with rice, servings=2, prep_time=30
+2026-04-08 15:15:58,834 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-08 15:15:58,844 | INFO | app.tools | Recipe created successfully: id=8, name=sweer-sour chicken with rice
+2026-04-08 15:15:58,844 | INFO | app.graph | Calling model | active_collection=China food | active_recipe=sweer-sour chicken with rice | messages=21
+2026-04-08 15:16:00,074 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:16:00,219 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-08 15:16:00,219 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-08 15:16:59,179 | INFO | __main__ | User input: name should be different. It must be sweet-sour chicken with rice
+2026-04-08 15:16:59,184 | INFO | app.graph | Calling model | active_collection=China food | active_recipe=sweer-sour chicken with rice | messages=23
+2026-04-08 15:17:10,523 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:17:10,834 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-08 15:17:10,834 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-08 15:17:10,843 | INFO | app.agent_tools | Tool call: create_recipe_tool | name=sweet-sour chicken with rice
+2026-04-08 15:17:10,843 | INFO | app.tools | Creating recipe: collection_id=10, name=sweet-sour chicken with rice, servings=2, prep_time=30
+2026-04-08 15:17:10,843 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-08 15:17:10,854 | INFO | app.tools | Recipe created successfully: id=9, name=sweet-sour chicken with rice
+2026-04-08 15:17:10,854 | INFO | app.graph | Calling model | active_collection=China food | active_recipe=sweet-sour chicken with rice | messages=25
+2026-04-08 15:17:12,529 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:17:12,723 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-08 15:17:12,724 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-08 15:17:35,024 | INFO | __main__ | User input: delete sweer-sour
+2026-04-08 15:17:35,028 | INFO | app.graph | Calling model | active_collection=China food | active_recipe=sweet-sour chicken with rice | messages=27
+2026-04-08 15:17:41,720 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:17:41,984 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-08 15:17:41,986 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-08 15:17:54,237 | INFO | __main__ | User input: Is replacement supported?
+2026-04-08 15:17:54,243 | INFO | app.graph | Calling model | active_collection=China food | active_recipe=sweet-sour chicken with rice | messages=29
+2026-04-08 15:18:02,807 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:18:03,048 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-08 15:18:03,048 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-08 15:20:56,052 | INFO | __main__ | User input: Can you list collections that you have and reciepies
+2026-04-08 15:20:56,062 | INFO | app.graph | Calling model | active_collection=China food | active_recipe=sweet-sour chicken with rice | messages=31
+2026-04-08 15:21:11,570 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:21:11,953 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-08 15:21:11,953 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-08 15:29:50,876 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 15:29:50,877 | INFO | __main__ | OPENAI_API_KEY found
+2026-04-08 15:30:30,389 | INFO | __main__ | User input: Create collection "Russian Cuisine"
+2026-04-08 15:30:30,406 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-08 15:30:31,900 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-04-08 15:31:40,655 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 15:31:40,655 | INFO | __main__ | OPENAI_API_KEY found
+2026-04-08 15:31:52,228 | INFO | __main__ | User input: test
+2026-04-08 15:31:52,249 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-08 15:31:53,294 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-04-08 15:38:44,263 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 15:38:44,263 | INFO | __main__ | OPENAI_API_KEY found
+2026-04-08 15:38:59,719 | INFO | __main__ | User input: test
+2026-04-08 15:38:59,729 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-08 15:39:01,282 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-04-08 15:45:55,881 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 15:45:55,881 | INFO | __main__ | Using OPENAI_API_KEY from environment
+2026-04-08 15:46:20,109 | INFO | __main__ | User input: test
+2026-04-08 15:46:20,119 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-08 15:46:21,136 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-04-08 15:50:51,821 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 15:51:11,493 | INFO | __main__ | OPENAI_API_KEY entered by user for current session only
+2026-04-08 15:51:27,739 | INFO | __main__ | User input: Create a collection "Russian food"
+2026-04-08 15:51:27,750 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-08 15:51:29,180 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-04-08 15:51:47,373 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 15:51:52,496 | INFO | __main__ | OPENAI_API_KEY entered by user for current session only
+2026-04-08 15:51:58,695 | INFO | __main__ | User input: test
+2026-04-08 15:51:58,702 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-08 15:52:06,723 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:52:06,800 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-08 15:52:06,800 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-08 15:52:06,810 | INFO | app.agent_tools | Tool call: list_collections_tool
+2026-04-08 15:52:06,810 | INFO | app.tools | Listing collections
+2026-04-08 15:52:06,810 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-08 15:52:06,820 | INFO | app.tools | Collections listed: count=3
+2026-04-08 15:52:06,820 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=3
+2026-04-08 15:52:13,579 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 15:52:13,768 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-08 15:52:13,770 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-08 15:54:19,638 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 15:54:19,638 | INFO | __main__ | Using OPENAI_API_KEY from .env
+2026-04-08 16:46:02,980 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 16:47:02,165 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 16:47:02,165 | INFO | __main__ | Using OPENAI_API_KEY from .env
+2026-04-08 16:50:46,745 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 16:50:46,745 | INFO | __main__ | Using OPENAI_API_KEY from .env
+2026-04-08 16:51:11,501 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 16:51:11,501 | INFO | __main__ | Using OPENAI_API_KEY from .env
+2026-04-08 16:56:35,294 | INFO | __main__ | Starting Recipe Manager CLI
+2026-04-08 16:56:35,304 | INFO | __main__ | Using OPENAI_API_KEY from .env
+2026-04-08 16:57:16,063 | INFO | __main__ | User input: Create a collection "Italian Cuisine"
+2026-04-08 16:57:16,079 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=1
+2026-04-08 16:57:19,707 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 16:57:19,787 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-08 16:57:19,787 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-08 16:57:19,787 | INFO | app.agent_tools | Tool call: create_collection_tool | name=Italian Cuisine
+2026-04-08 16:57:19,787 | INFO | app.tools | Creating collection: name=Italian Cuisine
+2026-04-08 16:57:19,787 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-08 16:57:19,797 | ERROR | app.tools | Failed to create collection: name=Italian Cuisine
+Traceback (most recent call last):
+  File "C:\Users\vabel\OneDrive\Рабочий стол\after_PhD\agent_cook\app\tools.py", line 14, in create_collection
+    cursor.execute(
+sqlite3.IntegrityError: UNIQUE constraint failed: collections.name
+2026-04-08 16:57:19,797 | INFO | app.graph | Calling model | active_collection=None | active_recipe=None | messages=3
+2026-04-08 16:57:23,358 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 16:57:23,528 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-08 16:57:23,528 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-08 16:57:23,538 | INFO | app.agent_tools | Tool call: select_collection_tool | name=Italian Cuisine
+2026-04-08 16:57:23,538 | INFO | app.tools | Getting collection by name: Italian Cuisine
+2026-04-08 16:57:23,538 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-08 16:57:23,538 | INFO | app.tools | Collection found by name: id=15, name=Italian Cuisine
+2026-04-08 16:57:23,552 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=5
+2026-04-08 16:57:29,814 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 16:57:29,890 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-08 16:57:29,890 | INFO | app.graph | Routing decision | has_tool_calls=False
+2026-04-08 16:59:09,389 | INFO | __main__ | User input: What other collections are there?
+2026-04-08 16:59:09,396 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=7
+2026-04-08 16:59:14,602 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 16:59:14,639 | INFO | app.graph | Model responded | has_tool_calls=True
+2026-04-08 16:59:14,639 | INFO | app.graph | Routing decision | has_tool_calls=True
+2026-04-08 16:59:14,639 | INFO | app.agent_tools | Tool call: list_collections_tool
+2026-04-08 16:59:14,639 | INFO | app.tools | Listing collections
+2026-04-08 16:59:14,639 | INFO | app.db | Opening SQLite connection to cookbook.db
+2026-04-08 16:59:14,639 | INFO | app.tools | Collections listed: count=1
+2026-04-08 16:59:14,639 | INFO | app.graph | Calling model | active_collection=Italian Cuisine | active_recipe=None | messages=9
+2026-04-08 16:59:18,394 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-08 16:59:18,474 | INFO | app.graph | Model responded | has_tool_calls=False
+2026-04-08 16:59:18,475 | INFO | app.graph | Routing decision | has_tool_calls=False
