@@ -7,3 +7,5 @@ langgraph-prebuilt==1.0.9
 openai==2.30.0
 pydantic==2.12.5
 python-dotenv==1.2.2
+tiktoken==0.12.0
+typing_extensions==4.15.0
